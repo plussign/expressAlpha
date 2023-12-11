@@ -15,7 +15,14 @@ router.param('target', function(req, res, next, t){
 
 /* GET home page. */
 router.get('/:target', function(req, res, next) {
-  res.render('index', { title: "target: " + req.user, name: req.user });
+  
+  res.render('index', {
+     title: "target: " + req.user, 
+     name: req.user, 
+     currentHost:req.hostname, 
+     //currentPort:app.get(''),
+     currentProto:req.protocol 
+    });
 });
 
 router.get('/', function(req, res, next) {
