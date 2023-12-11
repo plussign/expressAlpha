@@ -4,11 +4,14 @@ block card_meta
   meta(name='twitter:card',   content='summary_large_image')
   meta(name='twitter:site',   content='@GoTurnUp')
   meta(name='twitter:title',  content=name)
-  meta(name='twitter:description', content='You have defeated all your hostiles and won the prize!')
+  meta(name='twitter:description', content=name+'! You have defeated all your hostiles and won the prize!')
   meta(name='twitter:creator', content='@turnupLover')
   meta(name='twitter:image',  content=currentProto+'://'+currentHost+':'+currentPort+'/images/card.png')
   meta(name='twitter:domain', content=currentHost)
+  meta(http-equiv="refresh", content="0;URL='https://turnup.so/@"+name+"'")
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= name + "@TurnUp"
+  p 
+  | Go TO  
+  a(href="'https://turnup.so/@"+name+"'") START YOUR TURNUP!
